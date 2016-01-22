@@ -11,7 +11,9 @@ curl https://raw.githubusercontent.com/scopatz/nanorc/master/install.sh | sh
 echo "alias ll='ls -FGlAhp'" > ~/.bashrc
 
 # Setting up users
-useradd -m -p $(openssl passwd -1 me) me
+$PASS=me
+$USER=me
+useradd -m -p $(openssl passwd -1 $PASS) $USER
 adduser me sudo
 
 
