@@ -8,7 +8,7 @@ apt-get autoremove
 
 # Setting up preferences
 curl https://raw.githubusercontent.com/scopatz/nanorc/master/install.sh | sh
-echo "alias ll='ls -FGlAhp'" > ~/.bashrc
+echo "alias ll='ls -FGlAhp'" > ~/.bash_profile
 
 # Setting up users
 $PASS=me
@@ -17,8 +17,8 @@ useradd -m -p $(openssl passwd -1 $PASS) $USER
 adduser me sudo
 
 #Terminal preferences
-echo "export TERM="xterm-color"" >> /root/.bashrc
-echo "export PS1='\[\e[1;31m\]\u\[\e[0m\]@\[\e[0;32m\]\h\[\e[0m\]:\[\e[0;34m\]\w\[\e[0m\]\$ '" >> /root/.bashrc
+echo "export TERM="xterm-color"" >> /root/.bash_profile
+echo "export PS1='\[\e[1;31m\]\u\[\e[0m\]@\[\e[0;32m\]\h\[\e[0m\]:\[\e[0;34m\]\w\[\e[0m\]\$ '" >> /root/.bash_profile
 
 ## change [\e[1;31m\] to other colors - this one is bold red
 ##
